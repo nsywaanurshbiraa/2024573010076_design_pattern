@@ -1,4 +1,4 @@
-package modul_1;
+package praktikum_1;
 
 public class Variable {
     public static void main(String[] args) {

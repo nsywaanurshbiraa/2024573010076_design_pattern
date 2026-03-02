@@ -1,4 +1,4 @@
-package modul_1.latihan;
+package praktikum_1.latihan;
 
 public class GanjilDoWhile {
     public static void main(String[] args) {
