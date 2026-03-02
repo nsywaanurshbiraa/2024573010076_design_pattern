@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/2024573010076_design_pattern.iml" filepath="$PROJECT_DIR$/.idea/2024573010076_design_pattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ti_design_pattern/ti_design_pattern.iml" filepath="$PROJECT_DIR$/ti_design_pattern/ti_design_pattern.iml" />
+    </modules>
+  </component>
+</project>
