@@ -1,9 +1,192 @@
-# Laporan Modul 2: Review 4 Pillar OOP menggunakan Java
+# Laporan Modul 2: Review Konsep Dasar OOP menggunakan Java
 
-**Mata Kuliah:** Praktikum Design Pattern\
-**Nama:** Nasywa Nurshabira\
-**NIM:** 2024573010076\
+**Mata Kuliah:** Praktikum Design Pattern  
+**Nama:** Nasywa Nurshabira  
+**NIM:** 2024573010076  
 **Kelas:** TI 2A
+
+---
+
+## 1. Abstrak
+Pada praktikum ini dipelajari konsep dasar Object-Oriented Programming (OOP) menggunakan bahasa pemrograman Java. OOP merupakan paradigma pemrograman yang berorientasi pada objek sebagai representasi data dan perilaku.
+
+Materi yang dipelajari meliputi class, object, attribute, method, akses modifier, setter dan getter, serta constructor. Dengan memahami konsep-konsep ini, mahasiswa dapat membuat program yang lebih terstruktur, modular, dan mudah dikembangkan.
+
+---
+
+## 2. Praktikum
+
+### Bagian 1: Class dan Object
+#### Penjelasan
+Class adalah blueprint untuk membuat objek, sedangkan object adalah instance dari class yang memiliki atribut dan method.
+
+#### Percobaan
+```java
+public class Mahasiswa {
+    String nama;
+    int umur;
+
+    void tampilkanInfo() {
+        System.out.println("Nama: " + nama);
+        System.out.println("Umur: " + umur);
+    }
+}
+```
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Mahasiswa mhs = new Mahasiswa();
+        mhs.nama = "Budi";
+        mhs.umur = 20;
+
+        mhs.tampilkanInfo();
+    }
+}
+```
+hasil program(output)
+![Mahasiswa](pict/MahasiswaMain.png)
+#### Analisa
+Pada percobaan ini, terlihat bahwa class berfungsi sebagai cetakan (blueprint) yang mendefinisikan atribut dan method, sedangkan object merupakan representasi nyata dari class tersebut. Dengan menggunakan object, data dapat dikelola secara terstruktur karena setiap object memiliki state dan behavior masing-masing.
+
+Penggunaan class dan object juga meningkatkan keterbacaan kode karena program dapat dipecah menjadi bagian-bagian kecil yang merepresentasikan entitas di dunia nyata. Hal ini sangat penting dalam pengembangan software skala besar.
+---
+
+### Bagian 2: Attribute dan Method
+#### Penjelasan
+Attribute adalah variabel dalam class, sedangkan method adalah fungsi.
+
+#### Percobaan
+```java
+public class Kalkulator {
+    int tambah(int a, int b) {
+        return a + b;
+    }
+}
+```
+hasil program(ouput)
+![Kalkulator](pict/KalkulatorMain.png)
+#### Analisa
+Pada percobaan ini, terlihat bahwa class berfungsi sebagai cetakan (blueprint) yang mendefinisikan atribut dan method, sedangkan object merupakan representasi nyata dari class tersebut. Dengan menggunakan object, data dapat dikelola secara terstruktur karena setiap object memiliki state dan behavior masing-masing.
+Penggunaan class dan object juga meningkatkan keterbacaan kode karena program dapat dipecah menjadi bagian-bagian kecil yang merepresentasikan entitas di dunia nyata. Hal ini sangat penting dalam pengembangan software skala besar.
+---
+
+### Bagian 3: Akses Modifier
+#### Penjelasan
+Akses modifier menentukan hak akses suatu atribut atau method.
+
+#### Percobaan
+```java
+public class AksesModifier {
+    public String nama = "Public";
+    private int umur = 20;
+
+    public int getUmur() {
+        return umur;
+    }
+}
+```
+hasil program(output)
+![AksesModifier](pict/AksesM.png)
+#### Analisa
+Penggunaan akses modifier seperti public dan private menunjukkan pentingnya pengamanan data dalam OOP. Atribut yang bersifat private tidak dapat diakses langsung dari luar class, sehingga mencegah perubahan data secara sembarangan.
+Hal ini meningkatkan keamanan dan menjaga integritas data. Selain itu, penggunaan getter sebagai penghubung antara atribut private dan luar class merupakan praktik yang baik dalam pengembangan program.
+---
+
+### Bagian 4: Setter dan Getter
+#### Penjelasan
+Setter untuk mengubah nilai, getter untuk mengambil nilai.
+
+#### Percobaan
+```java
+public class Mobil {
+    private String merk;
+
+    public void setMerk(String merk) {
+        this.merk = merk;
+    }
+
+    public String getMerk() {
+        return merk;
+    }
+}
+```
+![Mobil](pict/Mobil.png)
+#### Analisa
+Meningkatkan keamanan data.
+
+---
+
+### Bagian 5: Constructor
+#### Penjelasan
+Constructor dipanggil saat object dibuat.
+
+#### Percobaan
+```java
+public class Person {
+    String nama;
+
+    Person() {
+        nama = "Default";
+    }
+
+    Person(String nama) {
+        this.nama = nama;
+    }
+}
+```
+![person](pict/Person.png)
+#### Analisa
+Mempermudah inisialisasi object.
+
+---
+
+### Bagian 6: Sistem Manajemen Perpustakaan
+#### Penjelasan
+Menggabungkan semua konsep OOP.
+
+#### Percobaan
+```java
+public class Buku {
+    private String judul;
+    private String pengarang;
+
+    public Buku(String judul, String pengarang) {
+        this.judul = judul;
+        this.pengarang = pengarang;
+    }
+
+    public void tampilkanInfo() {
+        System.out.println(judul + " - " + pengarang);
+    }
+}
+```
+![perpustakaan](pict/Perpustakaan.png)
+#### Analisa
+Program menjadi modular dan mudah dikembangkan.
+
+---
+
+## 3. Kesimpulan
+Berdasarkan hasil praktikum yang telah dilakukan, dapat disimpulkan bahwa konsep dasar Object-Oriented Programming (OOP) sangat penting dalam pengembangan perangkat lunak. Konsep seperti class, object, attribute, method, akses modifier, setter-getter, dan constructor membantu dalam menyusun program yang lebih terstruktur dan sistematis.
+
+Dengan menerapkan OOP, program menjadi lebih modular sehingga mudah untuk dipahami, diuji, dan dikembangkan. Selain itu, penggunaan encapsulation melalui akses modifier dan setter-getter meningkatkan keamanan data dan mencegah akses yang tidak diinginkan.
+
+Constructor juga berperan penting dalam memastikan setiap object memiliki kondisi awal yang valid, sedangkan penggunaan struktur seperti ArrayList dalam program menunjukkan fleksibilitas dalam pengelolaan data.
+
+Secara keseluruhan, praktikum ini memberikan pemahaman yang kuat mengenai dasar-dasar OOP yang akan sangat berguna dalam pengembangan aplikasi yang lebih kompleks di masa depan.
+
+---
+
+## 4. Referensi
+1. Modul Praktikum Design Pattern Politeknik Negeri Lhokseumawe
+2. Oracle. (2023). Java Documentation. https://docs.oracle.com/javase/
+3. Schildt, H. (2019). Java: The Complete Reference. McGraw-Hill Education.
+4. Bloch, J. (2018). Effective Java. Addison-Wesley.
+5. Gamma, E., Helm, R., Johnson, R., & Vlissides, J. (1994). Design Patterns: Elements of Reusable Object-Oriented Software. Addison-Wesley.
+
+--- 
+ # Laporan Modul 3: Review 4 Pillar OOP menggunakan Java
 
 ------------------------------------------------------------------------
 
@@ -23,7 +206,7 @@ Class merupakan blueprint untuk membuat object, sedangkan object adalah instance
 ### Percobaan
 class mahasiswa
 ```
-package praktikum_2.bagian_1;
+package praktikum_3.bagian_1;
 
 public class Mahasiswa {
     // Atribut
@@ -41,7 +224,7 @@ public class Mahasiswa {
 ```
 class main
 ```
-package praktikum_2.bagian_1;
+package praktikum_3.bagian_1;
 
 public class Main {
     public static void main(String[] args) {
@@ -70,7 +253,7 @@ Encapsulation adalah teknik menyembunyikan data menggunakan `private` dan mengak
 ### Percobaan
 class Mahasiswa
 ```
-package praktikum_2.bagian_2;
+package praktikum_3.bagian_2;
 
 public class Mahasiswa {
     // Atribut private
@@ -98,7 +281,7 @@ public class Mahasiswa {
 ```
 class Main
 ```
-package praktikum_2.bagian_2;
+package praktikum_3.bagian_2;
 
 public class Main {
     public static void main(String[] args) {
@@ -129,7 +312,7 @@ Inheritance adalah pewarisan dari superclass ke subclass (hubungan "is-a").
 #### Percobaan
 class Kendaraan
 ```
-package praktikum_2.bagian_3.pewarisan;
+package praktikum_3.bagian_3.pewarisan;
 
 public class Kendaraan {
     String merk;
@@ -144,7 +327,7 @@ public class Kendaraan {
 ```
 class Mobil
 ```
-package praktikum_2.bagian_3.pewarisan;
+package praktikum_3.bagian_3.pewarisan;
 
 public class Mobil extends Kendaraan{
     int JumlahPintu;
@@ -158,7 +341,7 @@ public class Mobil extends Kendaraan{
 ```
 class Main
 ```
-package praktikum_2.bagian_3.pewarisan;
+package praktikum_3.bagian_3.pewarisan;
 
 public class Main {
     public static void main(String[] args) {
@@ -188,7 +371,7 @@ Composition adalah hubungan "has-a", dimana sebuah class memiliki objek dari cla
 #### Percobaan
 class Mesin
 ```
-package praktikum_2.bagian_3.komposisi;
+package praktikum_3.bagian_3.komposisi;
 
 public class Mesin {
     void hidupkan(){
@@ -202,7 +385,7 @@ public class Mesin {
 ```
 class Mobil
 ```
-package praktikum_2.bagian_3.komposisi;
+package praktikum_3.bagian_3.komposisi;
 
 public class Mobil {
     private final Mesin mesin; // Composition
@@ -225,7 +408,7 @@ public class Mobil {
 ```
 class Main
 ```
-package praktikum_2.bagian_3.komposisi;
+package praktikum_3.bagian_3.komposisi;
 
 public class Main {
     public static void main(String[] args) {
@@ -269,7 +452,7 @@ Overriding adalah penggantian method dari superclass di subclass.
 #### Percobaan
 class Hewan
 ```
-package praktikum_2.bagian_4.overriding;
+package praktikum_3.bagian_4.overriding;
 
 public class Hewan {
     void bersuara() {
@@ -280,7 +463,7 @@ public class Hewan {
 ```
 class Kucing
 ```
-package praktikum_2.bagian_4.overriding;
+package praktikum_3.bagian_4.overriding;
 
 public class Kucing extends Hewan{
     @Override
@@ -292,7 +475,7 @@ public class Kucing extends Hewan{
 ```
 class Anjing
 ```
-package praktikum_2.bagian_4.overriding;
+package praktikum_3.bagian_4.overriding;
 
 public class Anjing extends Hewan{
     @Override
@@ -304,7 +487,7 @@ public class Anjing extends Hewan{
 ```
 class Main
 ```
-package praktikum_2.bagian_4.overriding;
+package praktikum_3.bagian_4.overriding;
 
 public class Main {
     public static void main(String[] args) {
@@ -333,7 +516,7 @@ Overloading adalah method dengan nama sama tetapi parameter berbeda.
 #### Percobaan
 class Kalkulator
 ```
-package praktikum_2.bagian_4.overloading;
+package praktikum_3.bagian_4.overloading;
 
 public class Kalkulator {
     // Method overloading: penjumlahan dua bilangan bulat
@@ -355,7 +538,7 @@ public class Kalkulator {
 ```
 class Main
 ```
-package praktikum_2.bagian_4.overloading;
+package praktikum_3.bagian_4.overloading;
 
 public class Main {
     public static void main(String[] args) {
@@ -392,7 +575,7 @@ Abstract class adalah class yang tidak bisa diinstansiasi dan memiliki method ab
 #### Percobaan
 class Hewan
 ```
-package praktikum_2.bagian_5.abstrak;
+package praktikum_3.bagian_5.abstrak;
 
 abstract class Hewan {
     // Atribut
@@ -411,7 +594,7 @@ abstract class Hewan {
 ```
 class Kucing
 ```
-package praktikum_2.bagian_5.abstrak;
+package praktikum_3.bagian_5.abstrak;
 
 // Subclass dari abstract class
 class Kucing extends Hewan {
@@ -425,7 +608,7 @@ class Kucing extends Hewan {
 ```
 class Anjing
 ```
-package praktikum_2.bagian_5.abstrak;
+package praktikum_3.bagian_5.abstrak;
 
 class Anjing extends Hewan {
     @Override
@@ -438,7 +621,7 @@ class Anjing extends Hewan {
 ```
 class Main
 ```
-package praktikum_2.bagian_5.abstrak;
+package praktikum_3.bagian_5.abstrak;
 
 public class Main {
     public static void main(String[] args) {
@@ -470,7 +653,7 @@ Interface adalah kontrak yang harus diimplementasikan oleh class.
 #### Percobaan
 class Bergerak
 ```
-package praktikum_2.bagian_5.antarmuka;
+package praktikum_3.bagian_5.antarmuka;
 
 // Interface
 interface Bergerak {
@@ -491,7 +674,7 @@ interface Bergerak {
 ```
 class Mobil
 ```
-package praktikum_2.bagian_5.antarmuka;
+package praktikum_3.bagian_5.antarmuka;
 
 class Mobil implements Bergerak {
     @Override
@@ -503,7 +686,7 @@ class Mobil implements Bergerak {
 ```
 class Pesawat
 ```
-package praktikum_2.bagian_5.antarmuka;
+package praktikum_3.bagian_5.antarmuka;
 
 class Pesawat implements Bergerak {
     @Override
@@ -515,7 +698,7 @@ class Pesawat implements Bergerak {
 ```
 class Main
 ```
-package praktikum_2.bagian_5.antarmuka;
+package praktikum_3.bagian_5.antarmuka;
 
 public class Main {
     public static void main(String[] args) {
@@ -554,7 +737,7 @@ Aplikasi ini menggabungkan seluruh konsep OOP.
 Membuat class:
 - Tiket (abstract)
 ```
-package praktikum_2.bagian_6;
+package praktikum_3.bagian_6;
 
 abstract class Tiket {
     private final String jenis;
@@ -578,7 +761,7 @@ abstract class Tiket {
 ```
 - TiketReguler & TiketVIP (inheritance)
 ```
-package praktikum_2.bagian_6;
+package praktikum_3.bagian_6;
 
 public class TiketReguler extends Tiket{
     public TiketReguler() {
@@ -593,7 +776,7 @@ public class TiketReguler extends Tiket{
 
 ```
 ```
-package praktikum_2.bagian_6;
+package praktikum_3.bagian_6;
 
 public class TiketVIP extends Tiket{
     public TiketVIP() {
@@ -609,7 +792,7 @@ public class TiketVIP extends Tiket{
 ```
 - Pesanan
 ```
-package praktikum_2.bagian_6;
+package praktikum_3.bagian_6;
 
 public class Pesanan {
     private final String namaPemesan;
@@ -654,7 +837,7 @@ public class Pesanan {
 ```
 - KonferensiApp
 ```
-package praktikum_2.bagian_6;
+package praktikum_3.bagian_6;
 
 import java.util.ArrayList;
 import java.util.Scanner;
