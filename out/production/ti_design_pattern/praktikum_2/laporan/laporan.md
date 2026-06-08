@@ -161,7 +161,7 @@ public class Buku {
     }
 }
 ```
-
+![perpustakaan](pict/Perpustakaan.png)
 #### Analisa
 Program menjadi modular dan mudah dikembangkan.
 
