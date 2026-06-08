@@ -158,7 +158,7 @@ public class Main {
 
 ## 4.1.3 Hasil Output
 
-![hasil praktikum 1](gambar/hasil_1.png)
+![hasil praktikum 1](gambar_laprak_7/hasil_1.png)
 
 ---
 
@@ -421,7 +421,7 @@ public class Main {
 
 ## 4.3.3 Hasil Output
 
-![hasil praktikum 2](gambar/hasil_2.png)
+![hasil praktikum 2](gambar_laprak_7/hasil_2.png)
 
 ---
 
@@ -552,7 +552,7 @@ public class Main {
 
 ## 4.4.3 Hasil Output
 
-![hasil praktikum 3](gambar/hasil_3.png)
+![hasil praktikum 3](gambar_laprak_7/hasil_3.png)
 
 ---
 
@@ -754,7 +754,7 @@ public class Main {
 
 ## Hasil Output
 
-![hasil latihan](gambar/latihan.png)
+![hasil latihan](gambar_laprak_7/latihan_7.png)
 
 ---
 
